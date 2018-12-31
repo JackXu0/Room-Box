@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="80dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/room_name"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="BSG 377"
+            android:textSize="27sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            />
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/room_name"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:id="@+id/available_time"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#0B123E"
+                android:text="13 : 00"
+                android:textSize="24sp"
+                android:layout_marginRight="5dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical">
+            <ImageView
+                android:id="@+id/wifi_strong"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/wifi_icon_strong"/>
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/wifi_weak"
+                android:layout_width="33dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/wifi_weak" />
+            <ImageView
+                android:id="@+id/printer_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/printer_icon"/>
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/couple_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="14dp"
+                android:src="@drawable/couple_black"/>
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/single_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="14dp"
+                android:src="@drawable/single_gray"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#0B123E"
+        android:gravity="center_vertical">
+        <RelativeLayout
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/arrow_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Room"
+                android:textSize="20sp"
+                android:layout_marginLeft="35dp"
+                android:textColor="#f1f3f3"
+                android:gravity="center"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="Room Story"
+            android:textColor="#ffffff"
+            android:textSize="22sp" />
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/write_icon"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp">
+        <com.github.rahatarmanahmed.cpv.CircularProgressView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progress_view"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:minWidth="20dp"
+            app:cpv_animAutostart="true"
+            app:cpv_indeterminate="true"
+            android:visibility="invisible"
+            app:cpv_color="#0B123E"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"/>
+        <ListView
+            android:id="@+id/room_stories_listView"
+            android:layout_width="match_parent"
+            android:divider="@null"
+            android:layout_height="wrap_content" >
+
+        </ListView>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/commet_box_background"
+        android:layout_alignParentBottom="true"
+        android:focusable="true"
+        android:gravity="center_vertical">
+        <EditText
+            android:id="@+id/commet_box"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:imeOptions="actionSend"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:inputType="text"
+            android:hint="Share Your Room Story ~"
+            android:textColorHint="#8a8a8a"
+            android:paddingLeft="20dp"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

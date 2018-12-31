@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#0B123E">
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/arrow_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="My Profile"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/photo_setting"
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="Profile Photo"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/avator"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="45dp"
+            android:focusable="false"
+            android:src="@drawable/default_avator" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:background="#dcdcdc">
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/arrow_right"
+             />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/name_setting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:text="Name"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dcdcdc"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp">
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/arrow_right2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/arrow_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Jinying Zhong"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:textSize="18sp"
+            android:layout_toLeftOf="@id/arrow_right2"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/gender_setting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:text="Gender"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dcdcdc"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp">
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/arrow_right3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/arrow_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Female"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:textSize="18sp"
+            android:layout_toLeftOf="@id/arrow_right3"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/major_setting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:text="Major"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dcdcdc"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp">
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/arrow_right4"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/arrow_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
+        <TextView
+            android:id="@+id/major"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="IMS"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:textSize="18sp"
+            android:layout_toLeftOf="@id/arrow_right4"/>
+    </RelativeLayout>
+</LinearLayout>

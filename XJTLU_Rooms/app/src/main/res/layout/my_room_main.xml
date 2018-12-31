@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#0B123E"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="14dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_back" />
+        <TextView
+            android:id="@+id/search_box"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:text="My Rooms"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:textSize="24sp"
+            />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/seperation_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="#828282"></LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.github.rahatarmanahmed.cpv.CircularProgressView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progress_view"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:minWidth="20dp"
+            app:cpv_animAutostart="true"
+            app:cpv_indeterminate="true"
+            android:visibility="invisible"
+            app:cpv_color="#0B123E"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"/>
+        <ListView
+            android:id="@+id/rooms_per_building_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+        </ListView>
+
+    </RelativeLayout>
+</LinearLayout>

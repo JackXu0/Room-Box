@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="@drawable/shape_window_dim"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#483D8B"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/back_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/arrow_back" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="Room Selection"
+                                android:textColor="#dcdcdc"
+                                android:textSize="24sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:id="@+id/moments_icon"
+                            android:layout_width="55dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp">
+                            <ImageView
+                                android:layout_width="43dp"
+                                android:layout_height="43dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/public_icon" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Public"
+                                android:textColor="#ffffff"
+                                android:layout_gravity="center_horizontal"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:id="@+id/take_notes_icon"
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@id/moments_icon">
+                            <ImageView
+                                android:layout_marginTop="3dp"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/private_icon" />
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Private"
+                                android:textColor="#ffffff"
+                                android:layout_gravity="center_horizontal"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/room_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="SC176"
+                        android:textColor="#ffffff"
+                        android:textSize="35sp" />
+
+                    <TextView
+                        android:id="@+id/room_type"
+                        android:layout_width="150dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="Medium Lecture Room"
+                        android:textColor="#ffffff" />
+
+                    <LinearLayout
+                        android:id="@+id/room_attributes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="24dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/wifi_strong"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/wifi_icon_strong_white" />
+
+                        <ImageView
+                            android:id="@+id/wifi_weak"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/wifi_weak_white"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/printer_has"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/printer_icon_white" />
+
+                        <ImageView
+                            android:id="@+id/printer_no"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/printer_gray"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/time_table_label"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Time Table"
+                        android:textColor="#000000"
+                        android:textSize="27sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/like_button"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/gray_stroke_with_corner"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/like_icon"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/like_icon_gray" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="LIKE"
+                            android:textColor="#000000"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/foot_mark_button"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/gray_stroke_with_corner"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/mark_footprint_icon"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="3dp"
+                            android:src="@drawable/mark_footprint_gray" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="MARK"
+                            android:textColor="#000000"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.weigan.loopview.LoopView
+                    android:id="@+id/duration_picker"
+                    android:layout_width="100dp"
+                    android:layout_height="180dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"></com.weigan.loopview.LoopView>
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#dcdcdc">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mark_choice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/single_mark_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/blue_stroke_with_corner"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/t_shirt_icon" />
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="Single"
+                            android:textColor="#000000"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/couple_mark_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/pink_stroke_with_corner"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/couple_icon" />
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="Couple"
+                            android:textColor="#000000"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dcdcdc">
+
+            </LinearLayout>
+
+
+            <ListView
+                android:id="@+id/available_periods"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

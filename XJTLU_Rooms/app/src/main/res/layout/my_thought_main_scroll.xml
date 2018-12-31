@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:minHeight="?actionBarSize"
+        app:layout_collapseMode="parallax"
+        >
+
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:contentScrim="#dcdcdc"
+            android:fitsSystemWindows="true"
+            android:minHeight="?actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+            <ImageView
+                android:background="@drawable/thoughs_background"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                android:minHeight="100dp"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                >
+
+                <ImageView
+                    android:id="@+id/back_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    app:layout_collapseMode="pin"
+                    android:src="@drawable/arrow_back_gray"/>
+
+            </android.support.v7.widget.Toolbar>
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:contentScrim="#000000"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="35dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="My Thought"
+                    android:textColor="#ffffff"
+                    android:textSize="27sp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="50dp"
+                    app:contentScrim="#000000"
+                    app:layout_collapseMode="parallax"
+
+                    />
+
+            </android.support.v7.widget.Toolbar>
+
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+
+
+    <!-- content view  好像这里只能是 NestedScrollView 否则无法带动上面一起滚动-->
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="?android:attr/actionBarSize"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <wingsoloar.com.xjtlu_rooms.View.CustomExpandableListView
+                android:id="@+id/expandableListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </wingsoloar.com.xjtlu_rooms.View.CustomExpandableListView>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

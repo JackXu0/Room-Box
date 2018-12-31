@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>SignInServlet</servlet-name>
+        <servlet-class>net.Group.WebApplication1.SignInServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HasPeopleServlet</servlet-name>
+        <servlet-class>net.Group.WebApplication1.HasPeopleServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StoryServlet</servlet-name>
+        <servlet-class>net.Group.WebApplication1.StoryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReturnStory</servlet-name>
+        <servlet-class>net.Group.WebApplication1.ReturnStory</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignInServlet</servlet-name>
+        <url-pattern>/SignInServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HasPeopleServlet</servlet-name>
+        <url-pattern>/HasPeopleServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StoryServlet</servlet-name>
+        <url-pattern>/StoryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReturnStory</servlet-name>
+        <url-pattern>/ReturnStory</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <servlet>
+        <servlet-name>DBManager</servlet-name>
+        <servlet-class>net.Group.WebApplication1.DBManager</servlet-class>
+        <init-param>
+            <param-name>DBUsername</param-name>
+            <!-- 这里是数据库用户名，一般情况下是root，无需改变 -->
+            <param-value>root</param-value>
+        </init-param>
+        <init-param>
+            <param-name>DBPassword</param-name>
+            <!-- 下面这两个标签中间写你的数据库密码，如果没设置就什么也别写，空格也不能有 -->
+            <param-value/>
+        </init-param>
+        <init-param>
+            <param-name>ConnectionURL</param-name>
+            <!-- myfirstapp是数据库的名字 -->
+            <param-value>jdbc:mysql://localhost:3306/roombox?characterEncoding=utf8</param-value>
+        </init-param>
+        <!-- 下面这行很重要，指示服务器在启动时立即加载这个Servlet -->
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+</web-app>

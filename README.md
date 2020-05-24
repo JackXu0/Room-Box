@@ -1,5 +1,7 @@
 # Room-Box
-![](xjtlu.png)
+| [![Introduction video can be ](xjtlu.png)](https://www.youtube.com/watch?v=HBnC3Ux72G0&t=9s)
+|:--:| 
+|Click for introduction video|
 
 This Android app makes it easy for students in my college to find available classrooms for self-study and to record and share what they see, hear, and think about in these rooms. Finding a classroom in XJTLU can be a very time- consuming task. The app captures the scheduling information of all rooms by crawling the room reservation website of the university, and displays the results to the user according to the time available first. Searching and multi-condition filtering are also supported. The sharing feature makes this app more interesting instead of simply a tool. 
 
